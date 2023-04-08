@@ -4,6 +4,9 @@ from Crypto.PublicKey import RSA
 from Crypto.Cipher import PKCS1_v1_5
 from flask import Flask, request
 
+
+app = Flask(__name__)
+
 @app.route('/encrypt')
 def encryptt():
 key = request.args.get('key', '')
